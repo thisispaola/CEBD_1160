@@ -1,0 +1,25 @@
+########################################################################
+# CEBD 1160
+# Assignment 2 - R Programming
+# Fall 2017
+#
+# By: M. Paola Calderon
+# Date: 2017-10-21
+#
+########################################################################
+# PART A - Histogram of Employee Age
+########################################################################
+y <- read.csv("https://raw.github.com/thisispaola/CEBD1160/master/data/sampleData.csv")
+hist(y$Age,main="Histogram of Employee Age", xlab = "Age", ylab = "Frequency", col = "blue")
+
+########################################################################
+# PART B - Histogram of Employee Hourly Rates
+########################################################################
+y <- read.csv("https://raw.github.com/thisispaola/CEBD1160/master/data/sampleData.csv")
+hist(y$HourlyRate,main="Histogram of Employee Hourly Rate", xlab = "Hourly Rate", ylab = "Frequency", col = "blue", ylim = c(0,300), breaks=9)
+
+########################################################################
+# PART C - Scatterplot of Hourly Rate vs Age
+########################################################################
+y <- read.csv("https://raw.github.com/thisispaola/CEBD1160/master/data/sampleData.csv")
+plot(y$Age,y$HourlyRate,main= "Scatterplot of Employee Hourly Rate vs Age", xlab = "Age", ylab = "Hourly Rate")
