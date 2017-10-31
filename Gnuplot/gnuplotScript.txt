@@ -1,0 +1,74 @@
+########################################################################
+# CEBD 1160
+# Final Project - Gnuplot
+# Fall 2017
+#
+# By: M. Paola Calderon
+# Date: 2017-10-28
+#
+########################################################################
+# PART A - Histogram of Employee Age - Attirition = Yes
+########################################################################
+set terminal png
+
+# Set bins
+bin_width = 10
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width*(bin_number(x)+0.5)
+
+# Formating - labels and axis
+set yrange[0:100]
+set xrange[0:70]
+set title "Histogram of Attrited Employee Age" 
+set xlabel "Age"
+set ylabel "Frequency"
+set key off  
+
+# Output and plotting
+set output "AttritionYesHistogramAge.png"
+set key autotitle columnhead
+plot "AttritionYesAge.csv" using (rounded($1)):(1) smooth frequency with boxes
+
+
+########################################################################
+# PART B - Histogram of Employee Hourly Rates - Attirition = Yes
+########################################################################
+set terminal png
+
+# Set bins
+bin_width = 10
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width*(bin_number(x)+0.5)
+
+# Formating - labels and axis
+set yrange[0:50]
+set xrange[0:120]
+set title "Histogram of Attrited Employee Hourly Rates"   
+set xlabel "Hourly Rates"
+set ylabel "Frequency"
+set key off
+
+# Output and plotting
+set output "AttritionYesHistogramHourlyRates.png"
+set key autotitle columnhead
+plot "AttritionYesHourlyRate.csv" using (rounded($1)):(1) smooth frequency with boxes
+
+########################################################################
+# PART C - Scatter Plot of Attrited Employees Hourly Rate vs Age
+########################################################################
+set terminal png
+
+# Formating - labels and axis
+set title "Scatterplot of Attrited Employee Hourly Rate vs Age"
+set xlabel "Age"
+set ylabel "Hourly Rate"
+set xrange[10:70]   
+set yrange[20:110]                                                         
+set grid
+
+# Output and plotting
+set output "scatterplotAttritionYesRateVsAge.png" 
+set key autotitle columnhead            
+set datafile separator ","
+set key off                        
+plot "AttritionYesAgeHourlyRate.csv" using 1:2 with points  
