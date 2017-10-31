@@ -1,0 +1,68 @@
+########################################################################
+# CEBD 1160
+# Assignment 1 - gnuplot
+# Fall 2017
+#
+# By: M. Paola Calderon
+# Date: 2017-10-15
+#
+########################################################################
+# PART A - Histogram of Employee Age
+########################################################################
+set terminal png
+
+# Set bins
+bin_width = 10
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width*(bin_number(x)+0.5)
+
+# Formating - labels and axis
+set yrange[0:800]
+set title "Histogram of Employee Age" 
+set xlabel "Age"
+set ylabel "Frequency"
+set key off  
+
+# Output and plotting
+set output "histogramAge.png"
+plot "age.csv" using (rounded($1)):(1) smooth frequency with boxes
+
+########################################################################
+# PART B - Histogram of Employee Hourly Rates
+########################################################################
+set terminal png
+
+# Set bins
+bin_width = 10
+bin_number(x) = floor(x/bin_width)
+rounded(x) = bin_width*(bin_number(x)+0.5)
+
+# Formating - labels and axis
+set yrange[0:300]
+set title "Histogram of Employee Hourly Rates"   
+set xlabel "Hourly Rates"
+set ylabel "Frequency"
+set key off
+
+# Output and plotting
+set output "histogramHourlyRates.png"
+plot "hourlyRate.csv" using (rounded($1)):(1) smooth frequency with boxes  
+
+########################################################################
+# PART C - Scatterplot of Hourly Rate vs Age
+########################################################################
+set terminal png
+
+# Formating - labels and axis
+set title "Scatterplot of Employee Hourly Rate vs Age"
+set xlabel "Age"
+set ylabel "Hourly Rate"
+set xrange[10:70]   
+set yrange[20:110]                                                         
+set grid
+set key off
+
+# Output and plotting
+set output "scatterplotRateVsAge.png"             
+set datafile separator ","                        
+plot "ageAndHourlyRate.csv" using 1:2 with points  
