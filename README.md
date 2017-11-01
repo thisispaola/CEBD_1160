@@ -7,6 +7,9 @@ This project uses a Kaggle dataset and software (Gnuplot, R Studio) to generate 
 This is a fictional HR dataset created by IBM data scientists.  
 Original Kaggle dataset: https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
+### NEXT STEPS
+After having an intro to R, as a next step I would like to run stats in R on samples of the data set to determine which attributes actually contribute to employee attrition.  
+
 ### SOFTWARE DETAILS
 #### Operating System
 Version: Windows 10 Education
@@ -27,7 +30,6 @@ Version: R for Windows
 Download: https://cran.rstudio.com/
 
 ****
-
 ### HOW TO GUIDE
 ****
 #### GNUPLOT
