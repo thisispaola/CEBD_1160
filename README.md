@@ -41,5 +41,5 @@ GitHub Repo Location: https://github.com/thisispaola/CEBD_1160/tree/master/Gnupl
 1. Download R
 2. Download and install RStudio
 3. Open following RScript in R Studio: https://github.com/thisispaola/CEBD_1160/blob/master/R/RScript.R
-4. Generated plots will be appear in Plts section of RStudio IDE  
+4. Generated plots will be appear in Plots Window of RStudio IDE  
 Note: Data will be read into RStudio from following GitHub Repo file: https://github.com/thisispaola/CEBD_1160/blob/master/Data/sampleData.csv
