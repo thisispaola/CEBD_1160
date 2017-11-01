@@ -35,11 +35,11 @@ GitHub Repo Location: https://github.com/thisispaola/CEBD_1160/tree/master/Gnupl
 1. Download and install Gnuplot.  Set Gnuplot's Current Directory to be: C:\Users\...\Documents
 2. Download and save data (.csv files) onto local computer location: C:\Users\...\Documents
 3. Copy and paste the following text file (Gnuplot Script) into Gnuplot terminal: https://github.com/thisispaola/CEBD_1160/blob/master/Gnuplot/gnuplotScript.txt
-4. Generated .png files will be located in Current Directory location
+4. Generated .png files will be located in Current Directory (C:\Users\...\Documents)
 
 #### RStudio
 1. Download R
 2. Download and install RStudio
 3. Open following RScript in R Studio: https://github.com/thisispaola/CEBD_1160/blob/master/R/RScript.R
-4. Generated plots will be appear in Plts section of RStudio IDE
-Note: Note: Data will be read into RStudio from following GitHub Repo file: https://github.com/thisispaola/CEBD_1160/blob/master/Data/sampleData.csv
+4. Generated plots will be appear in Plts section of RStudio IDE  
+Note: Data will be read into RStudio from following GitHub Repo file: https://github.com/thisispaola/CEBD_1160/blob/master/Data/sampleData.csv
