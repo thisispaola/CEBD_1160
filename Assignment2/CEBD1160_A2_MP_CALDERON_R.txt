@@ -9,6 +9,10 @@
 ########################################################################
 # PART A - Histogram of Employee Age
 ########################################################################
+# Install packages
+install.packages("RCurl")
+library(RCurl)
+
 y <- read.csv("https://raw.github.com/thisispaola/CEBD1160/master/data/sampleData.csv")
 hist(y$Age,main="Histogram of Employee Age", xlab = "Age", ylab = "Frequency", col = "blue")
 
